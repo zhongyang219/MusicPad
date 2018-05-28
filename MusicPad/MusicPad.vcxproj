@@ -183,21 +183,25 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AddNoteDlg.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="MusicNote.h" />
     <ClInclude Include="MusicPad.h" />
     <ClInclude Include="MusicPadDlg.h" />
     <ClInclude Include="MusicSource.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="SpinEdit.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AddNoteDlg.cpp" />
     <ClCompile Include="Common.cpp" />
     <ClCompile Include="MusicNote.cpp" />
     <ClCompile Include="MusicPad.cpp" />
     <ClCompile Include="MusicPadDlg.cpp" />
     <ClCompile Include="MusicSource.cpp" />
+    <ClCompile Include="SpinEdit.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

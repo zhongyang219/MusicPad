@@ -32,9 +32,10 @@ void CMusicNote::PlayNote(const Note& note)
 	DWORD time;		//音符的持续时间
 	time = m_full_note_time / note.type;
 	//音符时值延长
-	for (int i = 1; i <= note.extend_half; i++)
+	for (int i = 0; i <= 31; i++)
 	{
-		time += (m_full_note_time / note.type * (1 / std::pow(2, i)));
+		if ((note.extend_half >> i) % 2 != 0)
+			time += (m_full_note_time / note.type * (1 / std::pow(2, i)));
 	}
 	if (note.note == 0)	//为休止符时
 		Sleep(time);
