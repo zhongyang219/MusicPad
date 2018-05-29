@@ -50,8 +50,8 @@ void CMusicSource::LoadFromFile(LPCTSTR file_path)
 	try
 	{
 		ar >> temp;
-		ar >> no_use;
-		ar >> no_use;
+		ar >> m_mode;
+		ar >> m_full_note_time;
 		ar >> size;		//读取映射容器的长度
 		for (size_t i{}; i < size; i++)
 		{
@@ -90,8 +90,8 @@ bool CMusicSource::SaveToFile(LPCTSTR file_path)
 	CArchive ar(&file, CArchive::store);
 	// 写数据
 	ar << CString("MPDSC");				//文件开关写入固定的字符
-	ar << 0;						//预留
-	ar << 0;						//预留
+	ar << m_mode;
+	ar << m_full_note_time;
 	ar << m_note_list.size();		//写入映射容器的大小
 	for (auto& note : m_note_list)
 	{
