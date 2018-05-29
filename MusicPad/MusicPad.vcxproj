@@ -185,7 +185,7 @@
   <ItemGroup>
     <ClInclude Include="AddNoteDlg.h" />
     <ClInclude Include="Common.h" />
-    <ClInclude Include="MusicNote.h" />
+    <ClInclude Include="NotePlayer.h" />
     <ClInclude Include="MusicPad.h" />
     <ClInclude Include="MusicPadDlg.h" />
     <ClInclude Include="MusicSource.h" />
@@ -197,7 +197,7 @@
   <ItemGroup>
     <ClCompile Include="AddNoteDlg.cpp" />
     <ClCompile Include="Common.cpp" />
-    <ClCompile Include="MusicNote.cpp" />
+    <ClCompile Include="NotePlayer.cpp" />
     <ClCompile Include="MusicPad.cpp" />
     <ClCompile Include="MusicPadDlg.cpp" />
     <ClCompile Include="MusicSource.cpp" />

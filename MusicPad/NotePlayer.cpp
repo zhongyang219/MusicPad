@@ -1,17 +1,17 @@
 #include "stdafx.h"
-#include "MusicNote.h"
+#include "NotePlayer.h"
 
 
-CMusicNote::CMusicNote()
+CNotePlayer::CNotePlayer()
 {
 }
 
 
-CMusicNote::~CMusicNote()
+CNotePlayer::~CNotePlayer()
 {
 }
 
-void CMusicNote::PlayNote(const Note& note)
+void CNotePlayer::PlayNote(const Note& note)
 {
 	int index;		//音符以中央C为参考的序号（以半音为单位）
 	int index_in_octave{};	//音符在一个八度中的序号（以半音为单位）
@@ -43,7 +43,7 @@ void CMusicNote::PlayNote(const Note& note)
 		PlayNoteRaw(index, time);
 }
 
-void CMusicNote::PlayMusicSource(const vector<Note>& music_source)
+void CNotePlayer::PlayMusicSource(const vector<Note>& music_source)
 {
 	for (const auto& note : music_source)
 	{
@@ -51,7 +51,7 @@ void CMusicNote::PlayMusicSource(const vector<Note>& music_source)
 	}
 }
 
-void CMusicNote::PlayNoteRaw(int index, DWORD dwDuration)
+void CNotePlayer::PlayNoteRaw(int index, DWORD dwDuration)
 {
 	double freq;
 	freq = 261.626 * std::pow(2, (static_cast<double>(index) / 12));	//中央C的频率是261.626Hz，音符每相差一个半音，频率相差2的1/12次方倍
