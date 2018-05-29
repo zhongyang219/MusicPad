@@ -46,7 +46,6 @@ void CMusicSource::LoadFromFile(LPCTSTR file_path)
 	Note note;
 	CString temp;
 	int no_use;
-	int song_length;
 	try
 	{
 		ar >> temp;

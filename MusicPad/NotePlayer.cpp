@@ -35,7 +35,7 @@ void CNotePlayer::PlayNote(const Note& note)
 	for (int i = 0; i <= 31; i++)
 	{
 		if ((note.extend_half >> i) % 2 != 0)
-			time += (m_full_note_time / note.type * (1 / std::pow(2, i)));
+			time += (m_full_note_time / note.type * (1 / std::pow(2, i + 1)));
 	}
 	if (note.note == 0)	//ÎªÐÝÖ¹·ûÊ±
 		Sleep(time);
